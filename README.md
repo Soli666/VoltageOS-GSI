@@ -1,6 +1,6 @@
-# Project Spark
+# Project Voltage
 
-### To get started with building SparkOS GSI,
+### To get started with building VoltageOS GSI,
 you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 
 
@@ -10,14 +10,14 @@ As a first step, you'll have to create and enter a folder with the appropriate n
 To do that, run these commands:
 
 ```bash
-   mkdir spark
-   cd spark
+   mkdir voltage
+   cd voltage
 ```
 
 ### To initialize your local repository, run this command:
 
 ```bash
-   repo init -u https://github.com/Spark-Rom/manifest -b pyro
+    repo init -u https://github.com/VoltageOS/manifest.git -b 13
 ```
  
 
@@ -30,7 +30,7 @@ To do that, run these commands:
 ### Afterwards, sync the source by running this command:
 
 ```bash
-repo sync --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 
@@ -48,7 +48,7 @@ Copy the patches folder to rom folder and in rom folder
  
  ```
     cd device/phh/treble
-    bash generate.sh spark
+    bash generate.sh voltage
  ```
 
 ### Turn on caching to speed up build
@@ -68,7 +68,7 @@ In rom folder,
  ```
  . build/envsetup.sh
  ccache -M 50G -F 0
- lunch treble_arm64_bgN-userdebug 
+ lunch treble_arm64_bvN-userdebug 
  make systemimage -j$(nproc --all)
  ```
 
@@ -93,7 +93,7 @@ If you face any conflicts while applying patches, apply the patch manually.
 
 ## Credits
 These people have helped this project in some way or another, so they should be the ones who receive all the credit:
-- [SparkOS](https://github.com/Spark-Rom)
+- [Nazim N](https://github.com/naz664)
 - [Phhusson](https://github.com/phhusson)
 - [AndyYan](https://github.com/AndyCGYan)
 - [Ponces](https://github.com/ponces)
