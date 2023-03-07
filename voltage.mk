@@ -17,5 +17,10 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # Use CCache
 USE_CCACHE := true
 
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+	persist.sys.binary_xml=false \
+	dalvik.vm.dex2oat64.enabled=true \
+
 # APN
 PRODUCT_PACKAGES += apns-conf.xml
