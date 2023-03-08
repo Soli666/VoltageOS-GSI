@@ -67,7 +67,7 @@ In rom folder,
 
  ```
  . build/envsetup.sh
- ccache -M 50G -F 0
+ ccache -M 100G -F 0
  lunch treble_arm64_bvN-userdebug 
  make systemimage -j$(nproc --all)
  ```
