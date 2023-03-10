@@ -1,4 +1,4 @@
-$$(call inherit-product, vendor/voltage/config/common.mk)
+$(call inherit-product, vendor/voltage/config/common.mk)
 $(call inherit-product, vendor/voltage/config/common_full.mk)
 $(call inherit-product, vendor/voltage/config/BoardConfigSoong.mk)
 $(call inherit-product, vendor/voltage/config/BoardConfigVoltage.mk)
